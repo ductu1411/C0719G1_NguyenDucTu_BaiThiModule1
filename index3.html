@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 3</title>
+</head>
+<body>
+<script>
+    function printFibonacci() {
+        let n = prompt("Nhập giá trị N để in dãy số Fibonacci nhỏ hơn giá trị N: ");
+        let fibarr = [1,1];
+        for (let i = 2; i < Infinity; i++){
+            fibarr[i] = fibarr[i - 1] + fibarr[i - 2];
+            if (fibarr[i] >= n){
+               fibarr.splice(i, 1);
+               break;
+            }
+        }
+        return fibarr.join();
+    }
+    document.write(printFibonacci());
+</script>
+</body>
+</html>
